@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Select } from '@/components/ui/select'
 import { Button } from '@/components/ui/button'
 import { Member, Player, Keeper } from '@/types'
-import { createEmptyKeeper, getPenaltyRound, getKeeperRound, validateKeepers } from '@/lib/keeper-rules'
+import { createEmptyKeeper, getPenaltyRound, validateKeepers } from '@/lib/keeper-rules'
 
 interface MemberFormProps {
   member: Member

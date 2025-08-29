@@ -107,16 +107,12 @@ export default function SetupPage() {
     }
   }
 
-  const cleanMembers = (members: Member[]) => {
+  const cleanMembers = (members: Member[]): Member[] => {
     return members.map(member => {
-      const cleaned: any = { name: member.name }
-      
-      if (member.firstKeeper?.id && member.firstKeeper?.name) {
-        cleaned.firstKeeper = member.firstKeeper
-      }
-      
-      if (member.secondKeeper?.id && member.secondKeeper?.name) {
-        cleaned.secondKeeper = member.secondKeeper
+      const cleaned: Member = { 
+        name: member.name,
+        firstKeeper: member.firstKeeper?.id && member.firstKeeper?.name ? member.firstKeeper : undefined,
+        secondKeeper: member.secondKeeper?.id && member.secondKeeper?.name ? member.secondKeeper : undefined
       }
       
       return cleaned
