@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .letter { fill: #dc2626; font-family: monospace; font-weight: bold; font-size: 20px; }
+      .bg { fill: #1a1a1a; }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; }
+        .letter { fill: #dc2626; }
+      }
+    </style>
+  </defs>
+  <rect width="32" height="32" class="bg" rx="4"/>
+  <text x="16" y="22" text-anchor="middle" class="letter">A</text>
+</svg>
