@@ -2,9 +2,9 @@
 
 :root {
     /* Font families */
-    --font-sans: var(--font-special-elite), ui-monospace, monospace;
-    --font-serif: var(--font-courier-prime), ui-monospace, monospace;
-    --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+    --font-sans: var(--font-inter), ui-sans-serif, sans-serif;
+    --font-serif: var(--font-playfair-display), ui-serif, serif;
+    --font-mono: var(--font-fira-code), ui-monospace, monospace;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -65,6 +65,7 @@
     --color-accent: var(--accent);
     --color-accent-foreground: var(--accent-foreground);
     --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
     --color-border: var(--border);
     --color-input: var(--input);
     --color-ring: var(--ring);

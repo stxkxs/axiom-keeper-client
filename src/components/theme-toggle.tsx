@@ -14,14 +14,14 @@ export const ThemeToggle = () => {
   }, [])
 
   if (!mounted) {
-    return <Button variant="ghost" size="sm" className="w-9 h-9 px-0"><div className="h-4 w-4" /></Button>
+    return <Button variant="ghost" size="sm" className="w-9 h-9 px-0 cursor-pointer"><div className="h-4 w-4" /></Button>
   }
 
   return (
     <Button 
       variant="ghost" 
       size="sm" 
-      className="w-9 h-9 px-0"
+      className="w-9 h-9 px-0 cursor-pointer"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} theme`}
     >

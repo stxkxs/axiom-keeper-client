@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Special_Elite, Courier_Prime, JetBrains_Mono } from "next/font/google";
+import { Inter, Fira_Code, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { TeamSelector } from "@/components/team-selector";
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
-const specialElite = Special_Elite({
-  variable: "--font-special-elite",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 });
 
-const courierPrime = Courier_Prime({
-  variable: "--font-courier-prime",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
   subsets: ["latin"],
 });
 
@@ -35,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${specialElite.variable} ${courierPrime.variable} ${jetbrainsMono.variable} antialiased font-sans`}
+        className={`${inter.variable} ${inter.className} ${playfairDisplay.variable} ${playfairDisplay.className} ${firaCode.variable} ${firaCode.className} antialiased font-sans`}
       >
         <ThemeProvider
           attribute="class"
@@ -46,8 +48,11 @@ export default function RootLayout({
             <header className="border-b border-border/40">
               <div className="container mx-auto px-4 py-6">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-2xl font-bold font-serif">Axiom Keeper Client</h1>
+                  <Link href="/setup" className="text-2xl font-bold font-serif hover:opacity-80 transition-opacity cursor-pointer">
+                    Axiom Keeper Client
+                  </Link>
                   <div className="flex items-center gap-4">
+                    <TeamSelector />
                     <ThemeToggle />
                   </div>
                 </div>
